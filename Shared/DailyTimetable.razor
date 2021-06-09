@@ -1,0 +1,9 @@
+﻿@foreach (var Chunk in Timetable.Chunks)
+{
+    <TimetableChunk Chunk=@Chunk></TimetableChunk>
+}
+
+@code {
+    [Parameter]
+    public DailyTimetableResource Timetable { get; set; }
+}
