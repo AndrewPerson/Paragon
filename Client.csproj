@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove=".firebaserc" />
+    <None Remove="deploy.bat" />
   </ItemGroup>
 
   <ItemGroup>
