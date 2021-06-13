@@ -1,2 +1,2 @@
-﻿dotnet publish -c Release
+dotnet publish -c Release
 firebase deploy

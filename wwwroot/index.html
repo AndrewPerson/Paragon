@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="shortcut icon" type="image/svg" href="icon.svg" />
+    <link rel="shortcut icon" type="image/svg" href="icon.png" />
     <title>Paragon</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
@@ -55,29 +55,25 @@
         ];
         const rotation = [];
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < elements.length; i++) {
             speeds.push(Math.random() * 10);
             rotation.push(0);
         }
 
-        function Spin() {
-            for (let i = 0; i < 10; i++) {
+        function Animate() {
+            for (let i = 0; i < elements.length; i++) {
                 rotation[i] = (rotation[i] + speeds[i]) % 360;
                 try {
                     document.querySelector(elements[i]).style.transform = "rotate(" + rotation[i] + "deg)";
                 }
                 catch {
-                    StopSpinning();
+                    clearInterval(ID);
                     return;
                 }
             }
         }
 
-        let ID = setInterval(Spin, 30);
-
-        function StopSpinning() {
-            clearInterval(ID);
-        }
+        let ID = setInterval(Animate, 40);
     </script>
 </body>
 
