@@ -10,7 +10,6 @@ c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\fo
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\font\fonts\open-iconic.woff
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\ICON-LICENSE
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\README.md
-c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\icon-512.png
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\icon.svg
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\index.html
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\loading\p.svg
@@ -85,7 +84,6 @@ c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\fo
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\font\fonts\open-iconic.woff.br
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\ICON-LICENSE.br
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\README.md.br
-c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\icon-512.png.br
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\icon.svg.br
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\index.html.br
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\loading\p.svg.br
@@ -159,7 +157,6 @@ c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\fo
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\font\fonts\open-iconic.woff.gz
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\ICON-LICENSE.gz
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\css\open-iconic\README.md.gz
-c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\icon-512.png.gz
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\icon.svg.gz
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\index.html.gz
 c:\Projects\Paragon\Client\bin\Release\net5.0\publish\wwwroot\loading\p.svg.gz

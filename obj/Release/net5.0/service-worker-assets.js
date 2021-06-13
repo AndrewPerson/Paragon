@@ -1625,15 +1625,11 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
-      "hash": "sha256-IpHFcQvs03lh6W54zoeJRG1jW+VnGmwymzxLoXtKX7Y=",
-      "url": "icon-512.png"
-    },
-    {
       "hash": "sha256-NUqNCqaYbYspqFn9Z9uD\/qfZWL87x0PuaBERsG8V1MU=",
       "url": "icon.svg"
     },
     {
-      "hash": "sha256-VA1p5d2ZlVWxfslkLvCArXoUkucqGiO15zZcGCKekQ0=",
+      "hash": "sha256-9hhPFNPGJvUwCpzmxsQiVSXDLVHGN7eVTGCmaDZvJ8g=",
       "url": "index.html"
     },
     {
@@ -1681,7 +1677,7 @@
       "url": "loading\/portal-yellow.svg"
     },
     {
-      "hash": "sha256-rHx754p+5n9AhORMhgzde5cuf7fEhwaYe\/4Fts\/hkwA=",
+      "hash": "sha256-bXgO9WkKL2lJ8vn0JeoE+s0wUH0VNE9+i8dOeBY9Dqw=",
       "url": "manifest.json"
     },
     {
@@ -1697,5 +1693,5 @@
       "url": "Client.bundle.scp.css"
     }
   ],
-  "version": "f2XkBr4y"
+  "version": "97YBaSUn"
 };

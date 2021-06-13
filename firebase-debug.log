@@ -1,0 +1,50 @@
+[debug] [2021-06-13T08:10:06.525Z] ----------------------------------------------------------------------
+[debug] [2021-06-13T08:10:06.527Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\profe\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-06-13T08:10:06.528Z] CLI Version:   9.12.1
+[debug] [2021-06-13T08:10:06.528Z] Platform:      win32
+[debug] [2021-06-13T08:10:06.528Z] Node Version:  v14.16.0
+[debug] [2021-06-13T08:10:06.529Z] Time:          Sun Jun 13 2021 18:10:06 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2021-06-13T08:10:06.529Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-13T08:10:06.543Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-13T08:10:06.544Z] > authorizing via signed-in user (pyea0230@gmail.com)
+[debug] [2021-06-13T08:10:06.544Z] [iam] checking project web-paragon for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-06-13T08:10:06.546Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/web-paragon:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-06-13T08:10:08.102Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 08:10:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=186","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T08:10:08.107Z] > refreshing access token with scopes: []
+[debug] [2021-06-13T08:10:08.107Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T08:10:09.978Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 13 Jun 2021 08:10:11 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T08:10:10.004Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/web-paragon [none]
+[debug] [2021-06-13T08:10:11.875Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/web-paragon 200
+[debug] [2021-06-13T08:10:11.876Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/web-paragon {"projectId":"web-paragon","projectNumber":"59394117419","displayName":"Paragon","name":"projects/web-paragon","resources":{"hostingSite":"web-paragon"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'web-paragon'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-06-13T08:10:41.474Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-13T08:10:41.475Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T08:10:43.950Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sun, 13 Jun 2021 08:10:45 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T08:10:43.982Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/web-paragon/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-06-13T08:10:49.557Z] ----------------------------------------------------------------------
+[debug] [2021-06-13T08:10:49.559Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\profe\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-06-13T08:10:49.560Z] CLI Version:   9.12.1
+[debug] [2021-06-13T08:10:49.560Z] Platform:      win32
+[debug] [2021-06-13T08:10:49.560Z] Node Version:  v14.16.0
+[debug] [2021-06-13T08:10:49.561Z] Time:          Sun Jun 13 2021 18:10:49 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2021-06-13T08:10:49.561Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-13T08:10:49.569Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-13T08:10:49.570Z] > authorizing via signed-in user (pyea0230@gmail.com)
+[debug] [2021-06-13T08:10:49.570Z] [iam] checking project web-paragon for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-06-13T08:10:49.572Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/web-paragon:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-06-13T08:10:50.808Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 13 Jun 2021 08:10:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=189","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T08:10:50.811Z] > refreshing access token with scopes: []
+[debug] [2021-06-13T08:10:50.812Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-13T08:10:52.150Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sun, 13 Jun 2021 08:10:53 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-13T08:10:52.172Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/web-paragon [none]
