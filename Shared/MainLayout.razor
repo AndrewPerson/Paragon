@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime 
 
 <div class="page">
     <div class="sidebar">
@@ -15,3 +16,11 @@
         </div>
     </div>
 </div>
+
+@code {      
+    protected override void OnInitialized()
+    {
+        System.Diagnostics.Debug.WriteLine("Stopping...");
+        JSRuntime.InvokeVoidAsync("StopSpinning");
+    }
+}
