@@ -1,0 +1,32 @@
+﻿@inject IJSRuntime JSInterop 
+
+<nav @ref="nav" style="background-color: aliceblue; position: absolute; box-shadow: 0 0 10px gray; overflow: hidden; @navStyle">
+    <NavMenuItem Link="" Title="Home" Icon="home" Arrange="arrangement" />
+    <NavMenuItem Link="barcode" Title="ID Barcode" Icon="barcode" Arrange="arrangement" />
+    <NavMenuItem Link="timetable" Title="Timetable" Icon="grid" Arrange="arrangement" />
+    <NavMenuItem Link="announcements" Title="Announcements" Icon="megaphone" Arrange="arrangement" />
+    <NavMenuItem Link="calendar" Title="Calendar" Icon="calendar" Arrange="arrangement" />
+
+    <NavMenuItem Link="settings" Title="Settings" Icon="settings" Arrange="arrangement" AtEnd="true" />
+</nav>
+
+@code {
+    private ElementReference nav;
+
+    private NavMenuItem.Arrangement arrangement;
+    private string navStyle;
+
+    protected override void OnInitialized()
+    {
+        if (MainLayout.ScreenWidth >= MainLayout.ScreenHeight)
+        {
+            arrangement = NavMenuItem.Arrangement.Vertical;
+            navStyle = "width: fit-content; height: 100vh;";
+        }
+        else
+        {
+            arrangement = NavMenuItem.Arrangement.Horizontal;
+            navStyle = "width: 100%; height: fit-content; bottom: 0; text-align: center;";
+        }
+    }
+}

@@ -1,0 +1,35 @@
+﻿@if (Arrange == Arrangement.Vertical)
+{
+    <a href="@Link" title="@Title" class="nav-hover @(AtEnd ? "nav-end" : "")" style="width: fit-content; display: block">
+        <img class="nav-icon" src="icons/@(Icon).svg" />
+    </a>
+}
+else
+{
+    <a href="@Link" title="@Title" class="nav-hover @(AtEnd ? "nav-end" : "")" style="width: fit-content; display: inline-block">
+        <img class="nav-icon" src="icons/@(Icon).svg" />
+    </a>
+}
+
+@code {
+    public enum Arrangement
+    {
+        Horizontal,
+        Vertical
+    }
+
+    [Parameter]
+    public string Link { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string Icon { get; set; }
+
+    [Parameter]
+    public Arrangement Arrange { get; set; }
+
+    [Parameter]
+    public bool AtEnd { get; set; }
+}

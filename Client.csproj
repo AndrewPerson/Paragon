@@ -1,32 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <Content Remove="firebase.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove=".firebaserc" />
     <None Remove=".gitignore" />
     <None Remove="deploy.bat" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.6" PrivateAssets="all" />
-    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.7" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <CopyLocalFilesOutputGroupOutput Include="wwwroot"></CopyLocalFilesOutputGroupOutput>
   </ItemGroup>
 
   <ItemGroup>
@@ -41,4 +34,8 @@
     <None Include="wwwroot\loading\portal-yellow-semi.svg" />
     <None Include="wwwroot\loading\portal-yellow.svg" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <BlazorCacheBootResources>false</BlazorCacheBootResources>
+  </PropertyGroup>
 </Project>

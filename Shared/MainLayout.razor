@@ -1,26 +1,50 @@
 ﻿@inherits LayoutComponentBase
-@inject IJSRuntime JSRuntime 
+@inject IJSRuntime JSRuntime
+@inject IMemoryCache Cache
+@inject NavigationManager Navigator
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
+@if (ScreenWidth >= ScreenHeight)
+{
+    <NavMenu />
+
+    <div style="margin-left: 12vh;" class="px-4">
+        @Body
+    </div>
+}
+else
+{
+    <div class="px-4" style="margin-bottom: 12vw;">
+        @Body
     </div>
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
+    <NavMenu />
+}
 
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
+@code
+{
+    public static int ScreenWidth;
+    public static int ScreenHeight;
 
-@code {      
-    protected override void OnInitialized()
+    public string Code;
+
+    protected override async Task OnInitializedAsync()
     {
-        System.Diagnostics.Debug.WriteLine("Stopping...");
-        JSRuntime.InvokeVoidAsync("StopSpinning");
+        ScreenWidth = await JSRuntime.InvokeAsync<int>("getWidth");
+        ScreenHeight = await JSRuntime.InvokeAsync<int>("getHeight");
+
+        if (Cache.TryGetValue<string>("code", out Code))
+        {
+
+        }
+        else
+        {
+            /*
+            Navigator.NavigateTo("https://student.sbhs.net.au/api/authorize?response_type=code" + 
+                                                                           "&scope=all-ro" + 
+                                                                           "&state=abc" +
+                                                                           "&client_id=Paragon_Tools" +
+                                                                           "&redirect_uri=" + Navigator.Uri + "/callback");
+            */
+        }
     }
 }

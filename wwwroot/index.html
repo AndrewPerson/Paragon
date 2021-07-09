@@ -9,12 +9,26 @@
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
-    <link href="Client.styles.css" rel="stylesheet" />
     <link href="manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="150x150" href="icon.svg" />
 </head>
 
-<body>
+<body style="overflow: hidden">
+    <script>
+        function getWidth() {
+            return window.innerWidth;
+        }
+
+        function getHeight() {
+            return window.innerHeight;
+        }
+
+        function isOverflowing(element) {
+            console.log(element);
+            return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+        }
+    </script>
+    
     <div id="app">
         <div class="loading-container" id="loading">
             <img id="blue-semi" class="loading" src="loading/portal-blue-semi.svg" />
@@ -37,8 +51,10 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+
     <script src="_framework/blazor.webassembly.js"></script>
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
+
+    <script>navigator.serviceWorker.register('service-worker.published.js');</script>
     <script>
         const speeds = [];
         const elements = [
@@ -63,13 +79,16 @@
         function Animate() {
             for (let i = 0; i < elements.length; i++) {
                 rotation[i] = (rotation[i] + speeds[i]) % 360;
-                try {
-                    document.querySelector(elements[i]).style.transform = "rotate(" + rotation[i] + "deg)";
-                }
-                catch {
+
+                var element = document.querySelector(elements[i]);
+
+                if (element == null) {
+                    document.body.style = null;
                     clearInterval(ID);
                     return;
                 }
+
+                element.style.transform = "rotate(" + rotation[i] + "deg)";
             }
         }
 
