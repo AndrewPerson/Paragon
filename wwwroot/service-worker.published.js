@@ -6,7 +6,7 @@ self.addEventListener('fetch', event => event.respondWith(onFetch(event)));
 
 const cacheName = 'blazor-resources';
 const offlineAssetsInclude = [ /\.dll$/, /\.pdb$/, /\.wasm/, /\.html/, /\.js$/, /\.json$/, /\.css$/, /\.woff$/, /\.png$/, /\.jpe?g$/, /\.gif$/, /\.ico$/, /\.blat$/, /\.dat$/, /\.svg$/ ];
-const offlineAssetsExclude = [ /^service-worker\.js$/ ];
+const offlineAssetsExclude = []; //[ /^service-worker\.js$/ ];
 
 async function onInstall(event) {
     try {
